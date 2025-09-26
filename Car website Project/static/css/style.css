@@ -1,0 +1,170 @@
+/* Global Styles */
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e1d288;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(164, 164, 164);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(164, 164, 164, 0.9); 
+    backdrop-filter: blur(5px); 
+}
+
+.logo img {
+    max-height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ddd;
+}
+
+/* Content Container */
+.content {
+    min-height: calc(100vh - 150px); /* Adjust based on navbar and footer height */
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Common Container Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Home Page Specific */
+.home-container {
+    background: #dfc7eb;
+}
+
+.image-gallery {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-content {
+    flex: 2;
+    text-align: left;
+}
+
+/* Headings */
+h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #030303;
+    margin: 15px 0 10px;
+}
+
+/* Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Features Page */
+.features-container {
+    background: rgb(236, 236, 236);
+}
+
+.features-heading {
+    font-size: 4.5rem;
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 👉 Features Page Image */
+.car-features-img {
+    width: 400px;   /* fixed width */
+    height: auto;   /* keeps aspect ratio */
+    border-radius: 8px;
+}
+
+/* Contact Page */
+.contact-container {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .image-gallery {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

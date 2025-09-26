@@ -1,0 +1,27 @@
+<?php
+$servername = "localhost";
+$username = "Root";
+$password = "";
+$dbname = "myMohan_project";
+$Student_Name=$_Post['tb1']
+$email = $_post['tb2']
+$branch = $_post['tb3']
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO CSE DEPARTMENT (Student_Name,Student_email,Student_branch)
+VALUES ('Mohan','mohanraj22125@gmail.com','Cse*')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>

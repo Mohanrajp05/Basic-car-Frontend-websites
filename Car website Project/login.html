@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lamborghini Login & Sign Up</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+    .form-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.6);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+      color: #fff;
+      width: 350px;
+      text-align: center;
+    }
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    .form-container input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .form-container button {
+      width: 95%;
+      padding: 12px;
+      background: gold;
+      color: #222;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+    .form-container button:hover {
+      background: orange;
+      color: #fff;
+    }
+    .toggle-link {
+      color: #ffd700;
+      cursor: pointer;
+      text-decoration: underline;
+      margin-top: 15px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <video class="bg-video" autoplay loop muted>
+    <source src="templates/login animation.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="form-container" id="loginForm">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+    <span class="toggle-link" onclick="showSignUp()">Don't have an account? Sign Up</span>
+  </div>
+  <div class="form-container" id="signUpForm" style="display:none;">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Username" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <span class="toggle-link" onclick="showLogin()">Already have an account? Login</span>
+  </div>
+  <script>
+    function showSignUp() {
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('signUpForm').style.display = 'block';
+    }
+    function showLogin() {
+      document.getElementById('signUpForm').style.display = 'none';
+      document.getElementById('loginForm').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
